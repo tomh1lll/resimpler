@@ -11,6 +11,7 @@ If a group column is present and multiple groups (e.g. species, populations) are
 class column should contain the classes you are planning on finding differences for. Any classes not defined under -c will be considered part of the background class.
 
 for example, the test input provided:
+   
     group	chr	start	end	class	snipre	snipreb	alpha	dos
     mel	3R	26042206	26042660	AMP	-0.386202589	-1.156999555	-2	-0.25
     mel	2R	10634867	10635720	AMP	-0.243477792	-1.024424195	0	0
@@ -25,6 +26,7 @@ here is an example script for the provided test input, assuming that all 4 stati
     python resimpler.py -b 1000 -i test_input.txt -o test_output.txt -v snipre,snipreb,alpha,dos -c AMP,Antiviral RNAi
 
 Gives the following output:
+
     group	class	rep	snipre	snipreb	alpha	dos
     mel	AMP	0	-0.2352687808888889	0.7204883728888889	-0.938230933	0.10225491233333332
     mel	AMP	1	-0.3494176825555555	0.979108613111111	-0.19754234700000012	0.08438851266666667
